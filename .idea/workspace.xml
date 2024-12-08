@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cde8f9d4-c4b0-46b1-a5cd-3aa27f465ea6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Back/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Back/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Controllers/NumSerieController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Controllers/OperationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Controllers/TraceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Controllers/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Entities/EmailRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Entities/NumSerie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Entities/Operation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Entities/Roles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Entities/Trace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Entities/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Repositories/NumSerieRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Repositories/OperationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Repositories/TraceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Repositories/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/SagemcomApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Services/NumSerieService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Services/OperationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Services/TraceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/java/com/sagemcom/Services/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Back/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back/src/test/java/com/sagemcom/SagemcomApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front/src/app/components/front-footer/front-footer.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Front/src/app/components/front-footer/front-footer.component.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Back" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2jKbAGnRvJih6U0PhxZohiYw5Of" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.FoodApplication.executor": "Run",
+    "Spring Boot.SagemcomApplication (1).executor": "Run",
+    "Spring Boot.SagemcomApplication.executor": "Run",
+    "git-widget-placeholder": "Back",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Yasoulanda/OneDrive/Desktop/nesirne/Back",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.FoodApplication">
+    <configuration name="FoodApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="food" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.food.FoodApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.food.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SagemcomApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="food" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sagemcom.SagemcomApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.FoodApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cde8f9d4-c4b0-46b1-a5cd-3aa27f465ea6" name="Changes" comment="" />
+      <created>1721138570337</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721138570337</updated>
+      <workItem from="1721138571395" duration="11870000" />
+      <workItem from="1721650651663" duration="2210000" />
+      <workItem from="1721822817505" duration="8406000" />
+      <workItem from="1721945987811" duration="6056000" />
+      <workItem from="1721997688340" duration="762000" />
+      <workItem from="1722169257941" duration="2357000" />
+      <workItem from="1722279887434" duration="11348000" />
+      <workItem from="1722331004721" duration="2734000" />
+      <workItem from="1722346932618" duration="8336000" />
+      <workItem from="1722767637823" duration="12942000" />
+      <workItem from="1722855105752" duration="13067000" />
+      <workItem from="1722946655182" duration="6768000" />
+      <workItem from="1723125271208" duration="2485000" />
+      <workItem from="1723457907411" duration="7550000" />
+      <workItem from="1723728687988" duration="1269000" />
+      <workItem from="1725220769275" duration="658000" />
+      <workItem from="1725268976056" duration="674000" />
+      <workItem from="1726654205408" duration="126000" />
+      <workItem from="1729958224324" duration="5437000" />
+      <workItem from="1730021594955" duration="1250000" />
+      <workItem from="1730189289634" duration="740000" />
+      <workItem from="1731947446728" duration="693000" />
+      <workItem from="1732000902861" duration="1326000" />
+      <workItem from="1733405117943" duration="833000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
