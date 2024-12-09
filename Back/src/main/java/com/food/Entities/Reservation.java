@@ -33,8 +33,6 @@ public class Reservation implements Serializable{
     private Date dateReservation;
 
 
-
-
     // Custom constructor for JPQL queries
     public Reservation(Long id, String surplusTitle, String beneficiaireNom, String beneficiairePrenom, Boolean reponse, Date dateReservation) {
         this.id = id;

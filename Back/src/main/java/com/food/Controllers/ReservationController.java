@@ -48,44 +48,6 @@ public class ReservationController {
         return reservationService.getAllReservations();
     }
 
-//     @PostMapping("/{surplusId}/{login}")
-//     public ResponseEntity<?> createReservation(
-//             @PathVariable Long surplusId,
-//             @PathVariable String login) {
-//
-//         // Retrieve the surplus by its ID
-//         Surplus surplus = surplusService.getSurplusById(surplusId);
-//         if (surplus == null) {
-//             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Surplus not found.");
-//         }
-//
-//         // Check if the surplus is already reserved
-//         if (surplus.isReserved()) {
-//             // Get the current reservation for this surplus
-//             List<Reservation> existingReservations = reservationRepository.findAllBySurplusId(surplusId);
-//
-//             // Check if the current user is trying to reserve the surplus that they have already reserved
-//             for (Reservation reservation : existingReservations) {
-//                 if (reservation.getBeneficiaire().getLogin().equals(login)) {
-//                     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This surplus is already reserved by you.");
-//                 }
-//             }
-//         }
-//
-//         // Find the user by login
-//         User beneficiaire = userService.findByLogin(login);
-//         if (beneficiaire == null) {
-//             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found.");
-//         }
-//
-//         // Create a reservation for the user
-//         Reservation reservation = reservationService.createReservation(surplus, beneficiaire);
-//         return ResponseEntity.status(HttpStatus.CREATED).body(reservation);
-//     }
-
-
-
-
 
      @PostMapping("/{surplusId}/{login}")
      public ResponseEntity<?> createReservation(
