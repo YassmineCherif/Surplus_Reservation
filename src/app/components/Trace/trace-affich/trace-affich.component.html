@@ -1,0 +1,81 @@
+<div>
+  <!-- Create Trace Button -->
+  <div class="nav-container">
+    <button 
+      class="right-button" 
+      *ngIf="canCreateTrace()"
+      [routerLink]="['/trace/create']">
+      Create or Update Trace
+    </button>
+  </div>
+  
+  <!-- Search Input -->
+  <div class="search-container">
+    <input 
+      type="text" 
+      placeholder="Search by Serial Number, Operation, Trace, Created by" 
+      [(ngModel)]="searchTerm" 
+      (input)="filterTraces()" 
+    />
+    <!-- Date Search Input -->
+    <input 
+      type="date" 
+      [(ngModel)]="searchDate" 
+      (ngModelChange)="filterTraces()" 
+      placeholder="Search by Date"
+    />
+  </div>
+  
+  <!-- Table Container -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Serial Number</th>
+          <th>Operation</th>
+          <th>Trace</th>
+          <th>Date Creation</th>
+          <th>Date Start</th>
+          <th>Date End</th>
+          <th>Created By</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let trace of filteredTraces">
+          <td>{{ trace.idtrace }}</td>
+          <td>{{ trace.numserie }}</td>
+          <td>{{ trace.operationn }}</td>
+          <td class="multi-line">{{ trace.tracee }}</td>
+          <td>
+            <ng-container *ngIf="trace.datecreation">
+              <div>{{ trace.datecreation | date:'MM-dd-yyyy' }}</div>
+              <div>{{ trace.datecreation | date:'HH:mm:ss' }}</div>
+            </ng-container>
+          </td>
+          <td>
+            <ng-container *ngIf="trace.datedebut">
+              <div>{{ trace.datedebut | date:'MM-dd-yyyy' }}</div>
+              <div>{{ trace.datedebut | date:'HH:mm:ss' }}</div>
+            </ng-container>
+          </td>
+          <td>
+            <ng-container *ngIf="trace.datefin">
+              <div>{{ trace.datefin | date:'MM-dd-yyyy' }}</div>
+              <div>{{ trace.datefin | date:'HH:mm:ss' }}</div>
+            </ng-container>
+          </td>
+          <td>{{ trace.creerpar }}</td>
+          <td>
+            <button 
+              *ngIf="canDeleteTrace()"
+              (click)="deleteTrace(trace.idtrace)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

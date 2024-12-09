@@ -1,0 +1,119 @@
+/* Container for the form */
+div {
+  max-width: 600px; /* Limit the width of the form */
+  margin: auto; /* Center the form horizontally */
+  padding: 50px; /* Add padding around the form */
+  border: 1px solid #ddd; /* Light gray border around the form */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.big {
+  margin-top: 1cm;
+  margin-bottom: 8cm;
+
+}
+
+
+/* Header styling */
+h2 {
+  text-align: center; /* Center the header text */
+  color: #333; /* Darker text color */
+}
+
+/* Style labels for better readability */
+label {
+  display: block; /* Make labels block elements */
+  margin-bottom: 8px; /* Add space below the label */
+  font-weight: bold; /* Bold text for labels */
+  color: #3086FB ;
+
+}
+
+/* Style input fields */
+input[type="text"],
+textarea,
+select {
+  width: 90%; /* Make input fields take the full width of their container */
+  padding: 12px; /* Add padding inside input fields */
+  margin-bottom: 16px; /* Add space below each input field */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Increase font size for better readability */
+}
+
+/* Specific styling for the description field */
+.description-input {
+  width: 90%; /* Full width of the parent container */
+  height: 40px; /* Adjust height as needed */
+  padding: 5px; /* Padding inside the input */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+  font-size: 16px; /* Increase font size for readability */
+}
+
+/* Style the textarea specifically */
+textarea {
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Style the submit button */
+button {
+  display: block; /* Make the button a block element */
+  width: 70%; /* Make the button take the full width of its container */
+  padding: 10px; /* Add padding inside the button */
+  background-color: #0086FB; /* Blue background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Increase font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin: 20px auto; /* Center the button */
+
+}
+
+/* Style button on hover */
+button:hover {
+  background-color: #0086FB; /* Darker blue on hover */
+}
+
+/* Error message styling */
+.error-message {
+  display: flex;
+  align-items: center;
+  color: #D8000C; /* Red color for text */
+  background-color: #FFBABA; /* Light red background */
+  border: 1px solid #D8000C; /* Red border */
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.error-message .icon {
+  margin-right: 8px;
+}
+
+/* Highlight invalid input fields */
+input.ng-invalid.ng-dirty,
+select.ng-invalid.ng-dirty,
+textarea.ng-invalid.ng-dirty {
+  border-color: red; /* Red border for invalid fields */
+}
+
+/* Highlight valid input fields */
+input.ng-valid.ng-dirty,
+select.ng-valid.ng-dirty,
+textarea.ng-valid.ng-dirty {
+  border-color: green; /* Green border for valid fields */
+}
+
+/* Specific styling for the numeroserie input */
+.numeroserie-input {
+  width: 90%; /* Full width of the parent container */
+  height: 40px; /* Adjust height as needed */
+  padding: 5px; /* Padding inside the input */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+  font-size: 16px; /* Increase font size for readability */
+  margin-left: auto;
+
+}

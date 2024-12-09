@@ -1,0 +1,24 @@
+<div class="big">
+  <h2>Create Serial Number</h2>
+  <form (ngSubmit)="createNumSerie()" #numSerieForm="ngForm">
+    <div>
+      <label for="numeroserie">Serial Number:</label>
+      <input 
+        id="numeroserie" 
+        class="numeroserie-input" 
+        [(ngModel)]="numSerie.numeroserie" 
+        name="numeroserie" 
+        required
+        #numeroserie="ngModel"
+      >
+      <div *ngIf="numeroserie.invalid && (numeroserie.dirty || numeroserie.touched)" class="error-message">
+        <small *ngIf="numeroserie.errors?.['required']">Serial number is required.</small>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="numSerieForm.invalid">Create</button>
+  </form>
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

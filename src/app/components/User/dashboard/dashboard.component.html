@@ -1,0 +1,26 @@
+<div class="date-picker">
+  <input type="date" [(ngModel)]="selectedDate" (change)="filterByDate()" />
+</div>
+
+<div class="stats-cards">
+  <div class="stat-card" *ngFor="let stat of statistics">
+    <h2>{{ stat.count | number }}</h2>
+    <h3>{{ stat.label }}</h3>
+
+    <h3>{{ stat.percentage }}% <span [ngClass]="{'up': stat.isIncrease, 'down': !stat.isIncrease}">({{ stat.changeText }})</span></h3>
+  </div>
+</div>
+
+
+
+
+<div class="dashboard-container">
+  <div class="chart-container">
+    <h2>Bar Chart</h2>
+    <canvas id="barChart"></canvas>
+  </div>
+  
+</div>
+
+
+

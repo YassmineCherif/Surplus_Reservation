@@ -1,0 +1,113 @@
+.login-container {
+    max-width: 480px; 
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 35px; 
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    position: relative;
+    top: 50%;
+    margin-bottom: 1cm;
+    margin-top: 2%;
+
+ }
+
+h2 {
+    text-align: center;
+    color: #F20092; /* Dark, neutral text color */
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #582f0e; /* Primary color */
+    font-size: 19px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc; /* Neutral border color */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #582f0e; /* Secondary color on focus */
+    outline: none;
+}
+
+button {
+    display: block; /* Make the button a block element */
+    width: 40%; /* Make the button take the full width of its container */
+    padding: 10px; /* Add padding inside the button */
+    background-color: #f7d1e7; /* Couleur plus foncée au survol */
+    color: #000000; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+     cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 00px auto; 
+  
+  }
+
+button:hover {
+    background-color: #582f0e; /* Secondary color on hover */
+}
+
+.error-message {
+    color: #b30000; /* Dark red text */
+    background-color: #ffcccc; /* Light red background */
+    border: 1px solid #b30000; /* Dark red border */
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.additional-links {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #333; /* Neutral text color */
+}
+
+.forgot-password-link,
+.register-link {
+    display: block;
+    margin-top: 10px;
+    color: #333; /* Primary color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover,
+.register-link:hover {
+    color: #F20092; /* Secondary color on hover */
+}
+
+
+
+#role {
+    width: 100%;               /* Make it full width */
+    padding: 10px;             /* Add padding inside the dropdown */
+    font-size: 16px;           /* Increase font size */
+    border-radius: 5px;        /* Add rounded corners */
+    border: 1px solid #ccc;    /* Set a border color */
+    background-color: #fff;    /* Set background color */
+    box-sizing: border-box;    /* Ensure padding does not affect width */
+  }

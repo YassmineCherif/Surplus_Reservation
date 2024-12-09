@@ -1,0 +1,56 @@
+<div *ngIf="surplus" class="big">
+  <h2>Modifier Surplus</h2>
+  <form (ngSubmit)="updateSurplus()" #surplusForm="ngForm">
+
+    <div>
+      <label for="titre">Titre :</label>
+      <input 
+        id="titre" 
+        class="titre-input" 
+        [(ngModel)]="surplus.titre" 
+        name="titre" 
+        required
+        #titre="ngModel"
+      >
+      <div *ngIf="titre.invalid && (titre.dirty || titre.touched)" class="error-message">
+        <small *ngIf="titre.errors?.['required']">Titre requis.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="description">Description :</label>
+      <input 
+        id="description" 
+        class="description-input" 
+        [(ngModel)]="surplus.description" 
+        name="description" 
+        required
+        #description="ngModel"
+      >
+      <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error-message">
+        <small *ngIf="description.errors?.['required']">Description requise.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="dateexpiration">Date d'expiration :</label>
+      <input 
+        id="dateexpiration" 
+        type="date"
+        [(ngModel)]="surplus.dateExpiration"
+        name="dateexpiration"
+        required
+        #dateexpiration="ngModel"
+      >
+      <div *ngIf="dateexpiration.invalid && (dateexpiration.dirty || dateexpiration.touched)" class="error-message">
+        <small *ngIf="dateexpiration.errors?.['required']">Date d'expiration requise.</small>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="surplusForm.invalid">Modifier</button>
+  </form>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

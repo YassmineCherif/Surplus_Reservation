@@ -1,0 +1,70 @@
+/* Styles de la page d'accueil */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.home-page {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.home-image {
+    width: 100%;  /* Full width */
+    height: 100%;  /* Full height */
+    object-fit: cover;  /* Ensure the image covers the area without distortion */
+    filter: blur(8px);  /* Apply blur effect */
+    z-index: 1;  /* Position image below the overlay text */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 90%;
+    z-index: 2; /* Ensure the text is above the blurred image */
+}
+
+.overlay-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff; /* Text color */
+}
+
+.overlay-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ffffff; /* Text color */
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);  /* Semi-transparent dark overlay */
+    z-index: 1; /* Ensure overlay is below the text */
+}

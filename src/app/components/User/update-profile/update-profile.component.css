@@ -1,0 +1,106 @@
+.update-profile-container {
+    max-width: 480px;
+    margin: 1.5cm auto 1.1cm; /* Center container horizontally */
+    padding: 35px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+h2 {
+    text-align: center;
+    color: #F20092; /* Dark pink text color */
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    margin-bottom: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #582f0e; /* Primary color */
+    font-size: 19px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc; /* Neutral border color */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #582f0e; /* Secondary color on focus */
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 40%;
+    padding: 10px;
+    background-color: #f7d1e7; /* Lighter color for button */
+    color: #000000; /* Black text for contrast */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #582f0e; /* Darker color on hover */
+}
+
+.error-message {
+    color: #b30000; /* Dark red text */
+    background-color: #ffcccc; /* Light red background */
+    border: 1px solid #b30000; /* Dark red border */
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.success-message {
+    color: #006600; /* Dark green text */
+    background-color: #ccffcc; /* Light green background */
+    border: 1px solid #006600; /* Dark green border */
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.additional-links {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #333; /* Neutral text color */
+}
+
+.forgot-password-link,
+.register-link {
+    display: block;
+    margin-top: 10px;
+    color: #333; /* Neutral text color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover,
+.register-link:hover {
+    color: #F20092; /* Secondary color on hover */
+}

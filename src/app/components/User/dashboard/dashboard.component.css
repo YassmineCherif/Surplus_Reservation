@@ -1,0 +1,97 @@
+.dashboard-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 1cm;
+
+}
+
+.chart-container {
+  margin: 30px 0;
+}
+
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+  font-weight: 600;
+}
+
+
+
+
+/*   DATE   */
+
+
+.stats-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.stat-card {
+  background: #e2e2e2;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.stat-card h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.stat-card p {
+  margin: 8px 0;
+  color: #555454;
+}
+
+.stat-card .up {
+  color: green;
+}
+
+.stat-card .down {
+  color: red;
+}
+
+
+.date-picker {
+  display: flex;
+  justify-content: center; 
+  margin-bottom: 15px; 
+
+}
+
+
+.date-picker input {
+  width: 100%; 
+  max-width: 400px;  
+  padding: 10px; 
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  font-size: 16px; 
+  outline: none;
+  transition: border-color 0.3s; 
+  margin-top: 1cm;
+
+}
+
+
+.date-picker input:focus {
+  border-color: #0086FB; 
+}
+

@@ -1,0 +1,37 @@
+<div>
+    <div class="nav-container">
+      <button class="right-button" [routerLink]="['/refrigerateur/create']">Ajouter un réfrigérateur</button>
+    </div>
+
+  
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Places Disponibles (KG)</th>
+            <th>Donateur</th>
+            <th>Contact</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="filteredRefrigerateurs.length === 0">
+            <td colspan="5">Aucun réfrigérateur trouvé</td>
+          </tr>
+          <tr *ngFor="let refrigerateur of filteredRefrigerateurs">
+            <td>{{ refrigerateur.id }}</td>
+            <td>{{ refrigerateur.placesDisponibles }}</td>
+            <td>{{ refrigerateur.donateur?.nom }} {{ refrigerateur.donateur?.prenom }}</td>
+            <td>{{ refrigerateur.donateur?.numtel }}</td>
+
+            <td>
+              <button [routerLink]="['/refrigerateur/edit', refrigerateur.id]">Modifier</button>
+              <button (click)="deleteRefrigerateur(refrigerateur.id)">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

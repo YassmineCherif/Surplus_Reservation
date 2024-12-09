@@ -1,0 +1,52 @@
+<nav class="navbar">
+  <div class="navbar-section left">
+    <ul class="navbar-links left-links">
+      <!-- Display all links regardless of role -->
+      <li *ngIf="userRole === 'DONATEUR'">
+        <a routerLink="/Surplus/all" routerLinkActive="active" (click)="setSelectedLink('Surplus')">Surplus</a>
+      </li>
+
+      <li *ngIf="userRole === 'DONATEUR'">
+        <a routerLink="/refrigerateur/list" routerLinkActive="active" (click)="setSelectedLink('Refrigerateur')">Réfrigérateur </a>
+      </li>
+
+      
+      <!-- Show 'Reservation' link only if the role is 'beneficiaire' -->
+          <li *ngIf="userRole === 'BENEFICIAIRE'">
+        <a routerLink="/surplus/reserver" routerLinkActive="active" (click)="setSelectedLink('Annonce')">Surplus</a>
+      </li>  
+      <li *ngIf="userRole === 'BENEFICIAIRE'">
+        <a routerLink="/refrigerateur/all" routerLinkActive="active" (click)="setSelectedLink('Refrigerateur')">Réfrigérateur </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="navbar-logo">
+    <a (click)="navigateHome()">
+      <img src="assets/logo.png" alt=" Logo" />
+    </a>
+  </div>
+
+  <div class="navbar-section right">
+    <ul class="navbar-links right-links">
+      <!-- Show Home and Log in links if not logged in -->
+      <li *ngIf="!userLogin">
+        <a routerLink="/home" routerLinkActive="active" (click)="setSelectedLink('Home')">Accueil</a>
+      </li>
+      <li *ngIf="!userLogin">
+        <a routerLink="/login" routerLinkActive="active" (click)="setSelectedLink('Log in')">Se connecter</a>
+      </li>
+      <!-- Show user login and Logout links if logged in -->
+      <li *ngIf="userLogin">
+        <a>{{ userLogin }}</a>
+      </li>
+      <li *ngIf="userLogin">
+        <a (click)="navigateToProfile()">Profile</a>
+      </li>
+      <li *ngIf="userLogin">
+        <a (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>

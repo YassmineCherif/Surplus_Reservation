@@ -1,0 +1,29 @@
+<div *ngIf="refrigerateur" class="big">
+    <h2>Modifier Réfrigérateur</h2>
+    <form (ngSubmit)="updateRefrigerateur()" #refrigerateurForm="ngForm">
+  
+      <div>
+        <label for="place">Places Disponibles en kg:</label>
+        <input 
+          id="place" 
+          class="place-input" 
+          [(ngModel)]="refrigerateur.placesDisponibles" 
+          name="place" 
+          required
+          #place="ngModel"
+        >
+        <div *ngIf="place.invalid && (place.dirty || place.touched)" class="error-message">
+          <small *ngIf="place.errors?.['required']">place requis.</small>
+        </div>
+      </div>
+  
+     
+  
+      <button type="submit" [disabled]="refrigerateurForm.invalid">Modifier</button>
+    </form>
+  
+    <div *ngIf="errorMessage" class="error-message">
+      <p>{{ errorMessage }}</p>
+    </div>
+  </div>
+  

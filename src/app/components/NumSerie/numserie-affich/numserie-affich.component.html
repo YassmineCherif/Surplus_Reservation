@@ -1,0 +1,41 @@
+<div>
+  <div class="nav-container">
+    <button class="right-button" [routerLink]="['/numserie/create']">Create Serial Number</button>
+  </div>
+  <div class="search-container">
+    <input type="text" placeholder="Search by Serial Number, or Created By" [(ngModel)]="searchTerm" (input)="filterNumseries()" />
+  </div>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Serial Number</th>
+          <th>Date Creation</th>
+          <th>Created By</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let numSerie of filteredNumSeries">
+          <td>{{ numSerie.idnumserie }}</td>
+          <td>{{ numSerie.numeroserie }}</td>
+          <td>
+            <ng-container *ngIf="numSerie.datecreation">
+              <div>{{ numSerie.datecreation | date:'MM-dd-yyyy' }}</div>
+              <div>{{ numSerie.datecreation | date:'HH:mm:ss' }}</div>
+            </ng-container>
+          </td>
+          <td>{{ numSerie.creerpar }}</td>
+          <td>
+            <button [routerLink]="['/numserie/edit', numSerie.idnumserie]">Edit</button>
+            <button (click)="deleteNumSerie(numSerie.idnumserie!)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

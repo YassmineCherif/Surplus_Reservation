@@ -1,0 +1,39 @@
+<div class="login-container">
+    <h2>Connectez-vous à votre compte </h2>
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div>
+            <label for="loginEmail">Login:</label>
+            <input
+                type="text"
+                id="loginEmail"
+                name="loginEmail"
+                placeholder="Entrez votre login"
+                [(ngModel)]="loginEmail"
+                required
+            />
+        </div>
+        <div>
+            <label for="password">Mot de passe:</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Entrez votre mot de passe"
+
+                [(ngModel)]="password"
+                required
+            />
+                <a [routerLink]="['/forgot']" class="forgot-password-link">
+              <strong> Mod de passe oublié?</strong>
+            </a>
+        </div>
+
+        <button type="submit">Connecter</button>
+        <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+        <div class="additional-links">
+            <a [routerLink]="['/register']" class="register-link">
+                Vous n'avez pas de compte ?  <strong>S'inscrire</strong>
+              </a>
+        </div>
+    </form>
+</div>

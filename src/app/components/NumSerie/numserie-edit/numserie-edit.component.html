@@ -1,0 +1,26 @@
+<div *ngIf="numSerie" class="big">
+
+  <h2>Edit Serial Number</h2>
+  <form (ngSubmit)="updateNumSerie()" #numSerieForm="ngForm">
+    <input type="hidden" [(ngModel)]="numSerie.idnumserie" name="idnumserie" />
+
+    <div>
+      <label for="numeroserie">Serial Number:</label>
+      <input 
+        id="numeroserie" 
+        class="numeroserie-input" 
+        [(ngModel)]="numSerie.numeroserie" 
+        name="numeroserie" 
+        required
+        #numeroserie="ngModel"
+      >
+      <div *ngIf="numeroserie.invalid && (numeroserie.dirty || numeroserie.touched)" class="error-message">
+        <small *ngIf="numeroserie.errors?.['required']">Serial number is required.</small>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="numSerieForm.invalid">Update</button>
+  </form>
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>

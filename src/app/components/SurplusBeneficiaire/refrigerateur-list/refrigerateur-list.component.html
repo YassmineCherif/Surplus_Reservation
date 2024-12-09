@@ -1,0 +1,28 @@
+<div>
+ 
+  
+ 
+  
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Places Disponibles (KG)</th>
+            <th>Donateur</th>
+            <th>Contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="filteredRefrigerateurs.length === 0">
+            <td colspan="5">Aucun réfrigérateur trouvé</td>
+          </tr>
+          <tr *ngFor="let refrigerateur of filteredRefrigerateurs">
+            <td>{{ refrigerateur.placesDisponibles }}</td>
+            <td>{{ refrigerateur.donateur?.nom }} {{ refrigerateur.donateur?.prenom }}</td>
+            <td>{{ refrigerateur.donateur?.numtel }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

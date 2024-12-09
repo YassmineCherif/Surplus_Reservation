@@ -1,0 +1,41 @@
+<div>
+  <div class="search-container">
+    <input
+      type="text"
+      placeholder="Chercher une annonce"
+      [(ngModel)]="searchTerm"
+      (input)="filterSurpluses()"
+    />
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Titre</th>
+          <th>Description</th>
+          <th>Date Expiration</th>
+          <th>Réservation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="filteredSurpluses.length === 0">
+          <td colspan="4">No surpluses found.</td>
+        </tr>
+        <tr *ngFor="let surplus of filteredSurpluses">
+          <td class="multi-line">{{ surplus.titre }}</td>
+          <td>{{ surplus.description }}</td>
+          <td>{{ surplus.dateExpiration | date: 'MM-dd-yyyy' }}</td>
+          <td>
+            <button 
+             (click)="reserverSurplus(surplus.id)" 
+             [class.reserved]="surplus.reserved"
+             [disabled]="surplus.reserved">
+             {{ surplus.reserved ? 'Déjà réservé' : 'Réserver' }}
+            </button>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

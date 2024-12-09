@@ -1,0 +1,120 @@
+/* Container for the file input and button */
+.trace-create-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2cm;
+  margin-bottom: 4cm;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Dynamic margin for the heading */
+.b { 
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0b006e;
+  text-align: center;
+}
+
+/* Style for the file input */
+.trace-create-container input[type="file"] {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem; /* 12px */
+  border: 1px solid #0086FB; /* Default color */
+  border-radius: 0.25rem; /* 4px */
+  font-size: 1rem; /* 16px */
+  width: 80%;
+  max-width: 400px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* Style for the button */
+.trace-create-container button {
+  background-color: #0086FB; /* Default color */
+  color: #ffffff;
+  font-size: 1.1rem; /* 18px */
+  padding: 0.75rem 1.5rem; /* 12px 24px */
+  border: none;
+  border-radius: 0.25rem; /* 4px */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 80%;
+  max-width: 400px;
+  margin-top: 1rem;
+  outline: none;
+}
+
+/* Button hover effect */
+.trace-create-container button:hover {
+  background-color: #00A1FF; /* Hover color */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Style for inputs on focus */
+.trace-create-container input[type="file"]:focus {
+  border-color: #00D3D6; /* Focus border color */
+  box-shadow: 0 0 5px rgba(0, 211, 214, 0.5); /* Focus shadow */
+}
+
+/* Message styles */
+.message {
+  margin-top: 1.5rem; /* 24px */
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  width: 80%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem; /* 16px */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem; /* Adjusted to rem units */
+}
+
+
+
+/* Error message */
+.message.error {
+  background-color: #FFBABA;
+  color: #D8000C;
+  border: 1px solid #D8000C;
+}
+
+/* Message icon */
+.message .icon {
+  margin-right: 0.5rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .trace-create-container {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .trace-create-container input[type="file"] {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .trace-create-container button {
+    font-size: 0.875rem; /* 14px */
+    padding: 0.5rem 1rem;
+  }
+
+  .message {
+    font-size: 0.875rem; /* 14px */
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}

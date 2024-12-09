@@ -1,0 +1,40 @@
+<div>
+  <h2>Créer un réfrigérateur</h2>
+  <form (ngSubmit)="createRefrigerateur()" #refrigerateurForm="ngForm">
+
+    <div>
+      <label for="place">Places Disponibles en kg:</label>
+      <input 
+        id="place" 
+        class="place-input" 
+        [(ngModel)]="refrigerateur.placesDisponibles" 
+        name="place" 
+        required
+        #place="ngModel"
+      >
+      <div *ngIf="place.invalid && (place.dirty || place.touched)" class="error-message">
+        <small *ngIf="place.errors?.['required']">Le nombre de place est requis.</small>
+      </div>
+    </div>
+
+    
+
+   
+    <div>
+      <label for="creerpar">Créé par (Rempli automatiquement) :</label>
+      <input 
+        id="creerpar" 
+        class="creerpar-input" 
+        [(ngModel)]="refrigerateur.creerpar" 
+        name="creerpar" 
+        readonly
+      >
+    </div>
+
+    <button type="submit" [disabled]="refrigerateurForm.invalid">Créer </button>
+  </form>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

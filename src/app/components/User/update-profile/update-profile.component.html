@@ -1,0 +1,57 @@
+<div class="update-profile-container">
+  <h2>Mettre à jour le profil</h2>
+  <form (ngSubmit)="onSubmit()" #updateProfileForm="ngForm">
+    <div>
+      <label for="email">Email :</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="email"
+        required
+        [placeholder]="email"
+      />
+      <p *ngIf="updateProfileForm.submitted && !email" class="error-message">L'email est requis.</p>
+      <p *ngIf="updateProfileForm.submitted && !isValidEmail(email)" class="error-message">Veuillez entrer une adresse email valide.</p>
+    </div>
+    <div>
+      <label for="numtel">Numéro de téléphone :</label>
+      <input
+        type="text"
+        id="numtel"
+        name="numtel"
+        [(ngModel)]="numtel"
+        required
+        [placeholder]="numtel"
+      />
+      <p *ngIf="updateProfileForm.submitted && !numtel" class="error-message">Le numéro de téléphone est requis.</p>
+      <p *ngIf="updateProfileForm.submitted && !isValidPhoneNumber(numtel)" class="error-message">Le numéro de téléphone doit comporter 8 chiffres.</p>
+    </div>
+    <div>
+      <label for="password">Mot de passe :</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="password"
+        [placeholder]="password ? '********' : 'Entrez un nouveau mot de passe'"
+      />
+      <p *ngIf="updateProfileForm.submitted && !password && password !== ''" class="error-message">Le mot de passe est requis.</p>
+    </div>
+    <div>
+      <label for="confirmPassword">Confirmer le mot de passe :</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        [(ngModel)]="confirmPassword"
+        [placeholder]="confirmPassword ? '********' : 'Confirmez votre mot de passe'"
+      />
+      <p *ngIf="updateProfileForm.submitted && !confirmPassword && confirmPassword !== ''" class="error-message">La confirmation du mot de passe est requise.</p>
+      <p *ngIf="updateProfileForm.submitted && password !== confirmPassword" class="error-message">Les mots de passe ne correspondent pas.</p>
+    </div>
+    <button type="submit">Mettre à jour</button>
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+    <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
+  </form>
+</div>

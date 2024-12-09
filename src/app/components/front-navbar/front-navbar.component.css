@@ -1,0 +1,117 @@
+/* Conteneur de la barre de navigation */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff; /* Fond blanc pour la barre de navigation */
+    height: 60px;
+    font-family: "Quicksand", sans-serif;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.navbar-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-logo img {
+    height: 100px; /* Increased height for a larger logo */
+    width: auto;  /* Ensures proportional scaling */
+    max-width: 100%; /* Ensures the image does not exceed container width */
+    display: block; /* Avoids extra margins */
+}
+
+/* Assurez-vous que les marges et le padding ne créent pas d'espace supplémentaire */
+.image-container {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sections de la barre de navigation */
+.navbar-section {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+/* Liens de la barre de navigation */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin: 0 20px;
+}
+
+.navbar-links a {
+    background-color: transparent !important;
+    color: #582f0e; /* Couleur par défaut des liens */
+    text-transform: inherit !important;
+    font-size: 18px;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0 10px 15px 10px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    background-image: none !important;
+}
+
+/* Effet de soulignement des liens */
+.navbar-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: #F20092; /* Couleur de l'underline */
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Effet au survol des liens */
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+/* Couleur des liens au survol */
+.navbar-links a:hover {
+    color: #F20092;
+}
+
+ 
+.home-image {
+    cursor: pointer; /* Change le curseur pour indiquer que l'image est cliquable */
+}
+
+
+.navbar-links a.disabled {
+    color: gray;
+    pointer-events: none; /* Prevent clicks */
+    cursor: not-allowed;
+  }
+  
+  .navbar-links a.disabled:hover {
+    text-decoration: none; /* Remove hover effect for disabled links */
+  }
+  

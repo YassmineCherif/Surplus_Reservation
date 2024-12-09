@@ -1,0 +1,8 @@
+<div class="trace-create-container">
+  <h2 class="b">Create or Update Traces</h2>
+  <input type="file" (change)="onFileChange($event)" />
+  <button (click)="saveTraces()">Create Trace</button>
+  <div *ngIf="message" [ngClass]="{'message': true, 'success': messageType === 'success', 'error': messageType === 'error'}">
+    {{ message }}
+  </div>
+</div>

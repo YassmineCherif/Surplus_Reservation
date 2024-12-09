@@ -1,0 +1,22 @@
+/* app.component.css */
+nav {
+    margin: 10px 0;
+  }
+  
+  nav button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  nav button:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  

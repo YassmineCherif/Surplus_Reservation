@@ -1,0 +1,53 @@
+<div>
+  <div class="nav-container">
+    <button class="right-button" [routerLink]="['/surplus/create']">Créer une annonce</button>
+  </div>
+
+ 
+
+  <div class="search-container">
+    <input
+      type="text"
+      placeholder="Chercher une annonce"
+      [(ngModel)]="searchTerm"
+      (input)="filterSurpluses()"
+    />
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Titre</th>
+          <th>Description</th>
+          <th>Date Expiration</th>
+          <th>Actions</th>
+          <th>Réservation</th>
+         </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="filteredSurpluses.length === 0">
+          <td colspan="5">No surpluses found.</td>
+        </tr>
+        <tr *ngFor="let surplus of filteredSurpluses">
+          <td>{{ surplus.id }}</td>
+          <td class="multi-line">{{ surplus.titre }}</td>
+          <td>{{ surplus.description }}</td>
+          <td>{{ surplus.dateExpiration | date: 'MM-dd-yyyy' }}</td>
+          <td>
+            <button [routerLink]="['/surplus/edit', surplus.id]">Modifier</button>
+            <button (click)="deleteSurplus(surplus.id)">Supprimer</button>
+          </td>
+
+          <td>
+            <button [routerLink]="['/surplus/reponse', surplus.id]">Voir les réservations</button>
+          </td>
+          
+
+
+         </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

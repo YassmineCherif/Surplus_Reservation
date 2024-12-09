@@ -1,0 +1,39 @@
+<div class="reservations-container">
+  <h2>Réponses aux réservations pour le surplus :  </h2>
+    
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Le Bénéficiaire</th>
+            <th>Réponse</th>
+            <th>Date de Réservation</th>
+            <th>Répondre à réservation</th>  
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="reservations.length === 0">
+            <td colspan="4">Aucune réservation trouvée.</td>
+          </tr>
+          <tr *ngFor="let reservation of reservations">
+            <td>{{ reservation.id }}</td>
+            <td>{{ reservation.beneficiaire?.nom }} {{ reservation.beneficiaire?.prenom }}</td>
+            <td>            {{ getResponseText(reservation.reponse) }}
+            </td>
+            <td>{{ reservation.dateReservation | date: 'dd/MM/yyyy HH:mm' }}</td>
+
+           <td *ngIf="reservation.reponse === null">
+            <button (click)="respondToReservation(reservation, true)" [ngClass]="'oui-button'">Oui</button>
+            <button (click)="respondToReservation(reservation, false)" [ngClass]="'non-button'">Non</button>
+          </td>
+          <td *ngIf="reservation.reponse !== null">
+            {{ getResponseText(reservation.reponse) }}
+          </td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
